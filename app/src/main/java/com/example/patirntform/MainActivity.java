@@ -43,19 +43,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Age = findViewById(R.id.main_age);
         Phone = findViewById(R.id.main_cell);
         Email = findViewById(R.id.main_email);
-        Insert = (Button) findViewById(R.id.main_insert);
-        ViewAll = (Button) findViewById(R.id.main_viewAll);
-        View = (Button) findViewById(R.id.main_view);
+        Insert = findViewById(R.id.main_insert);
+        ViewAll = findViewById(R.id.main_viewAll);
+        View = findViewById(R.id.main_view);
 
-        radioName = (RadioGroup) findViewById(R.id.radioName);
-        radioGender = (RadioGroup) findViewById(R.id.radioGender);
+        radioName = findViewById(R.id.radioName);
+        radioGender = findViewById(R.id.radioGender);
         radioName.clearCheck();
         radioGender.clearCheck();
 
-        cbiot = (CheckBox) findViewById(R.id.cbiot);
-        cbrobo = (CheckBox) findViewById(R.id.cbrobo);
-        cbai = (CheckBox) findViewById(R.id.cbai);
-        cbml = (CheckBox) findViewById(R.id.cbml);
+        cbiot = findViewById(R.id.cbiot);
+        cbrobo = findViewById(R.id.cbrobo);
+        cbai = findViewById(R.id.cbai);
+        cbml = findViewById(R.id.cbml);
 
         db = openOrCreateDatabase("StudentDB", Context.MODE_PRIVATE, null);
         db.execSQL("CREATE TABLE IF NOT EXISTS student(rollno VARCHAR, name VARCHAR,age VARCHAR, phone VARCHAR, email VARCHAR, fullname VARCHAR, gender VARCHAR, subject VARCHAR);");
@@ -82,8 +82,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             getSelected = radioName.getCheckedRadioButtonId();
             getGetSelected1 = radioGender.getCheckedRadioButtonId();
 
-            radioButton = (RadioButton) findViewById(getSelected);
-            genderButton = (RadioButton) findViewById(getGetSelected1);
+            radioButton = findViewById(getSelected);
+            genderButton = findViewById(getGetSelected1);
             // Checking for empty fields
             if (Rollno.getEditText().getText().toString().trim().length() == 0 ||
                     Name.getEditText().getText().toString().trim().length() == 0 ||
